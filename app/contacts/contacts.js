@@ -80,8 +80,8 @@ angular.module('contactApp.contacts', ['ngRoute', 'firebase'])
 				}
 			]
 		}).then(function(ref){
-			// var id = ref.key();
-			// console.log('added : ID=',id);
+			var id = ref.key;
+			console.log('added : ID=',id);
 
 			//Clear Form
 			clearFields();
