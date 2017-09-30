@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Contact App</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap//dist/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="app.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#!/contacts">My Contacts</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div ng-view></div>
+    </div><!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAKMEgb2_Dx5YcwNicszD_74M4oMuSjqGI",
+        authDomain: "my-first-project-d6815.firebaseapp.com",
+        databaseURL: "https://my-first-project-d6815.firebaseio.com/",
+        projectId: "my-first-project-d6815",
+        storageBucket: "my-first-project-d6815.appspot.com",
+        messagingSenderId: "566839047836"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="app.js"></script>
+    <script src="contacts/contacts.js"></script>
+  </body>
+</html>

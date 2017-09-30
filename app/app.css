@@ -1,0 +1,16 @@
+.table tbody > tr > td{
+  vertical-align: middle;
+}
+.table a {
+  cursor: pointer;
+}
+
+#show-contact ul,
+#show-contact li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#show-contact h5 {
+  padding: 5px;
+}
