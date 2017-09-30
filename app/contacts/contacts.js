@@ -15,10 +15,6 @@ angular.module('contactApp.contacts', ['ngRoute', 'firebase'])
 	// Get contacts
 	$scope.contacts = $firebaseArray(ref);
 	
-	$scope.removeContact = function(c) {
-		
-	};
-	
 	$scope.showAddForm = function(){
 		$scope.addFormShow = true;
 	};
@@ -138,6 +134,12 @@ angular.module('contactApp.contacts', ['ngRoute', 'firebase'])
 		$scope.zipcode = contact.address ? contact.address[0].zipcode : '';
 
 		$scope.contactShow = true;
+	};
+
+	$scope.removeContact = function(c) {
+		$scope.contacts.$remove(c);
+
+		$scope.msg = "Contact Removed!!!";
 	};
 
 	// clear $scope fields
